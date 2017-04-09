@@ -40,14 +40,14 @@ Also see [example-read.js](./example-read.js).
 const fs = require('fs')
 
 const local = fs.createWriteStream('./resource.json')
-client.createReadStream('/resource.json').then(stream => {
-  local.on('end', () => {
-    console.log('read ended!')
-  })
+const remote = client.createReadStream('/resource.json')
 
-  // Pipe the remote stream to the local stream
-  stream.pipe(local)
+local.on('end', () => {
+  console.log('read ended!')
 })
+
+// Pipe the remote stream to the local stream
+remote.pipe(local)
 ```
 
 ### Write example
@@ -59,14 +59,14 @@ Also see [example-write.js](./example-write.js).
 const fs = require('fs')
 
 const local = fs.createReadStream('./resource.json')
-client.createWriteStream('/resource.json').then(stream => {
-  remote.on('end', () => {
-    console.log('write ended!')
-  })
+const remote = client.createWriteStream('/resource.json')
 
-  // Pipe the local stream to the remote stream
-  local.stream(remote)
+remote.on('end', () => {
+  console.log('write ended!')
 })
+
+// Pipe the local stream to the remote stream
+local.stream(remote)
 ```
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
