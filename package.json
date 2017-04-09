@@ -1,6 +1,5 @@
 {
   "name": "nexus-client-http",
-  "private": true,
   "description": "HTTP client for nexus-server",
   "version": "0.0.1-alpha",
   "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",

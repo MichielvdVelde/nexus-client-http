@@ -10,10 +10,14 @@ wrapper that makes it as simple to work with remote files as it is with local fi
 
 > Nexus is currently **an alpha version**. Use at your own risk.
 
-> Also, it is **not yet available on npm**!
-
 Documentation is sparse at the moment, I will write some more later. In the mean
 time take a look at the source code if you're interested.
+
+## Install
+
+```
+npm install nexus-client-http
+```
 
 ## Examples
 
