@@ -46,8 +46,8 @@ Also see [example-read.js](./example-read.js).
 ```js
 const fs = require('fs')
 
-const local = fs.createWriteStream('./resource.json')
 const remote = client.createReadStream('/resource.json')
+const local = fs.createWriteStream('./resource.json')
 
 local.on('end', () => {
   console.log('read ended!')
