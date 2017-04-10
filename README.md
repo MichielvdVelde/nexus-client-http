@@ -5,7 +5,7 @@
 Node.js HTTP client for [Nexus](http://github.com/MichievdVelde/nexus-server), a
 simple HTTP file storage server.
 
-The client provides a streams-compatible interface. It's a thin-vailed semantic
+The client provides a streams-compatible interface. It's a thin-veiled semantic
 wrapper that makes it as simple to work with remote files as it is with local files.
 
 > Nexus is currently **an alpha version**. Use at your own risk.
