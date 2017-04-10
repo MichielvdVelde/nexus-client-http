@@ -76,6 +76,23 @@ remote.on('end', () => {
 local.stream(remote)
 ```
 
+### Enabling SSL
+
+By setting `options.secure` to `true` and providing the appropriate keys and/or
+certificates in the options object, HTTPS will be enabled and your connection
+will be secure.
+
+Note that this client uses `http(s).request`, so all options that can be provided
+there will be valid.
+
+```js
+const client = new Client({
+  secure: true,
+  key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
+  cert: fs.readFileSync('test/fixtures/keys/agent2-cert.pem')
+})
+```
+
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ### License
