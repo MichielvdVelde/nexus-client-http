@@ -1,7 +1,7 @@
 {
   "name": "nexus-client-http",
   "description": "HTTP client for nexus-server",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-alpha2",
   "author": "Michiel van der Velde <michiel@michielvdvelde.nl>",
   "license": "MIT",
   "keywords": [
